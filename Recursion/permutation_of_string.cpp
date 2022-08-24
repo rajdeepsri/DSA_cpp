@@ -15,6 +15,7 @@ private:
         for(int j=index; j<nums.size(); j++){
             swap(nums[index],nums[j]);
             solve(ans,index+1,nums);
+            swap(nums[index],nums[j]);
         }
     }
 public:
