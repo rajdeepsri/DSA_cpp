@@ -25,9 +25,18 @@ class Hero{
     Hero(int health){
         this->health = health; //this will point to object of Hero
     }
+    ~Hero(){ //destructor manually created
+        cout<<"Destructor called"<<endl;
+    static int timeToComplete; //creating static
+    }
 };
 
+int Hero::timeToComplete = 5; //accessing using static
+
 int main(){
+
+    cout<<Hero::timeToComplete;
+
 
     Hero ramesh(60);
 
@@ -36,8 +45,10 @@ int main(){
     cout<<S.health<<endl;
 
 
+
     // Hero h1; //creating instance of class Hero
-    // // Hero *a = new Hero; //dynamically creating object
+    Hero *a = new Hero; //dynamically creating object
+    delete a; //manually "called" destructor
     // h1.health = 60;
     // // h1.level = 'a';//accessing elements of object
     // //how to access private elements - use setters/getters
