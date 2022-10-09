@@ -26,14 +26,14 @@ void insertAtHead(Node* &head, int d){
     //create a new node
     Node *temp = new Node(d);
     temp->next = head;
-    head = temp;
+    head = temp; //update head
 }
 
 void insertAtTail(Node* &tail, int d){
     //create a new node
     Node *temp = new Node(d);
     tail->next = temp;
-    tail = temp;
+    tail = temp; //update tail
 }
 
 void insertAtPos(Node* &head,Node* &tail, int pos, int d){
