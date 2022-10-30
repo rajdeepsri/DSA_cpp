@@ -3,19 +3,18 @@
 using namespace std;
 
 int main(){
-    string str = "razz";
-    stack<char> s;
+    string s = "rajdeep";
+    stack<char> st;
 
-    cout<<"before : "<<str;
-    for(int i=0; i<str.size(); i++){
-        s.push(str[i]);
-    }
-    int i=0;
-    while(!s.empty()){
-        str[i++]=s.top();
-        s.pop();
+    for(int i=0; i<s.size(); i++){
+        st.push(s[i]);
     }
 
-    cout<<"after : "<<str;
+    string ans = "";
+    while(!st.empty()){
+        ans= ans + st.top();
+        st.pop();
+    }
+    cout<<"reversed string is "<<ans<<endl;
     return 0;
 }
