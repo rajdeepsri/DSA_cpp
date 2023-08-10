@@ -8,22 +8,16 @@ class node{
     node* right;
     node(int d){
         this->data=d;
-        this->left=nullptr;
-        this->right=nullptr;
+        this->left=this->right=nullptr
     }
 };
 
-node* buildTree(){
-    cout<<"enter the data"<<endl;
-    int data;
-    cin>>data;
-    root = 
-}
-
 int main(){
-    node* root = nullptr;
+    //creation of tree
+    node* root = new node(1);
+    root->left = new node(2);
+    root->right = new node(3);
+    root->left->right = new node(5);
 
-    //creating tree
-    root = buildTree(root);
     return 0;
 }

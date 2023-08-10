@@ -2,18 +2,15 @@
 using namespace std;
 
 void insSort(int arr[], int n){
-    bool swapped=false;
-    for(int j=n-1;j>0;j--){ //ya phir for(int j=0; j<n; j++)
-        for(int i=0;i<=j;i++){ //ya for(int i=0; i<n-i-1; i++)
-            if(arr[i]>arr[i+1]){
-                int temp = arr[i];
-                arr[i]=arr[i+1];
-                arr[i+1]=temp;
-                swapped = true;
+    bool isSwapped=false;
+    for(int i=n-1; i>0; i--){
+        for(int j=0; j<i; j++){
+            if(arr[j] > arr[j+1]){
+                swap(arr[j], arr[j+1]);
+                isSwapped=true;
             }
         }
-        //agar ek loop kuch bhi swap nhi krna pada, means already sorted(best case)
-        if(swapped==false) break; //for optimisation
+        if(!isSwapped) break; //optimization 
     }
 }
 
